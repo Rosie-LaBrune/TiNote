@@ -1,0 +1,8 @@
+## Title: TiNote
+## APIVersion: 100004
+## SavedVariables: TiNote_Vars
+
+TiNote.lua
+TiNote.xml
+Bindings.xml
+

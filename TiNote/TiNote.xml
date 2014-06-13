@@ -1,0 +1,62 @@
+<GuiXml>
+
+<Controls>
+<TopLevelControl name="TiNote" mouseEnabled="true" movable="true">
+
+<Dimensions x="100" y="40"/>
+<Anchor point="TOPLEFT"/>
+
+	<Controls>
+	<Label name="TiNoteLabel" font="ZoFontGameLargeBoldShadow" color="CFDCBD" wrapmode="ELLIPSIS" verticalAlignment="CENTER" text="note">
+		<Anchor point="TOPLEFT" offsetX="20"/>
+	</Label>
+	</Controls>
+		<OnUpdate>
+		TiNoteUpdate()
+		</OnUpdate>
+		
+	<Controls>
+	<Control name="TiNotePanel">
+	<Dimensions x="200" y="400"/>
+	<Anchor point="TOPLEFT"/>
+	
+		<Controls>
+		<Backdrop name="TiNoteBG" inherits="ZO_ThinBackdrop">
+		<Anchor relativeTo="TiNotePanel" point="TOPLEFT" offsetX="20" offsetY="30"/>
+		<Dimensions x="200" y="400"/>
+		
+			<Controls>
+			<EditBox name="TiNoteEditBox" multiLine="true" maxInputCharacters="2048" inherits="ZO_DefaultEditMultiLineForBackdrop" text="test...">
+			<Anchor relativeTo="TiNoteBG" point="TOPLEFT" offsetX="5" offsetY="5"/>
+			<Dimensions x="190" y="390"/>
+			</EditBox>
+			</Controls>	
+			
+				
+			<Controls>
+			<Label name="TiNoteCorner" mouseEnabled="true" movable="true" font="ZoFontGameLargeBoldShadow" color="2F2C2D" wrapmode="ELLIPSIS" verticalAlignment="CENTER" text="x">
+			<Anchor relativeTo="TiNoteBG" point="BOTTOMRIGHT" offsetX="0" offsetY="2"/>
+			</Label>
+			</Controls>
+		
+		</Backdrop>
+		</Controls>
+	
+	</Control>
+	</Controls>
+	
+	<Controls>
+	<Button name="ShowNoteButton" inherits="ZO_DefaultButton" text="Show note">
+	<Anchor relativeTo="TiNoteLabel" point="TOPLEFT" offsetX="80" offsetY="3"/>
+	<Dimensions y="20"/>
+		<OnClicked>
+		TiNoteToggleNote()
+		</OnClicked>
+	</Button>
+	</Controls>
+	
+</TopLevelControl>
+</Controls>
+
+
+</GuiXml>
