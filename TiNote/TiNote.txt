@@ -1,5 +1,7 @@
-## Title: TiNote
-## APIVersion: 100004
+## Title: Ti|cB70E99Note|r
+## APIVersion: 100007
+## Version: 1.03
+## Author: Rosie
 ## SavedVariables: TiNote_Vars
 
 TiNote.lua
